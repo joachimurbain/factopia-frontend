@@ -10,6 +10,7 @@ import { QuizzCardComponent } from "../quizz-card/quizz-card.component";
             <app-quizz-card 
                 [name]="quizzItem.name" 
                 [url]="quizzItem.url"
+                [icon]="quizzItem.icon"
                 [startColor]="quizzItem.gradient.startColor"
                 [endColor]="quizzItem.gradient.endColor"
                 [gradientAngle]="quizzItem.gradient.angle"
@@ -26,6 +27,7 @@ export class QuizzCardGridComponent {
         {
             name: "Tiktok",
             url: "/tiktok",
+            icon: "pi pi-play",
             gradient: {
                 startColor: "#FF0099",  // Pink
                 endColor: "#FF4D00",    // Orange
@@ -34,7 +36,8 @@ export class QuizzCardGridComponent {
         },
         {
             name: "Choix multiple",
-            url: "#",
+            url: "/multiple-choice",
+            icon: "pi pi-list",
             gradient: {
                 startColor: "#6366F1",  // Indigo
                 endColor: "#8B5CF6",    // Purple
@@ -44,6 +47,7 @@ export class QuizzCardGridComponent {
         {
             name: "Vrai ou faux",
             url: "#",
+            icon: "pi pi-check-square",  // Added a suitable icon for true/false
             gradient: {
                 startColor: "#059669",  // Emerald
                 endColor: "#10B981",    // Green
@@ -52,7 +56,8 @@ export class QuizzCardGridComponent {
         },
         {
             name: "Mots à trous",
-            url: "#",
+            url: "/fill-blanks",
+            icon: "pi pi-pencil",
             gradient: {
                 startColor: "#3B82F6",  // Blue
                 endColor: "#06B6D4",    // Cyan
@@ -65,6 +70,7 @@ export class QuizzCardGridComponent {
 interface QuizzCard {
     name: string;
     url: string;
+    icon: string;
     gradient: {
         startColor: string;
         endColor: string;
