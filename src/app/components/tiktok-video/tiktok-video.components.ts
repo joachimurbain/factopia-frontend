@@ -10,7 +10,7 @@ import { QuizAnswerPageComponent } from "../quiz-answer-page/quiz-answer-page.co
 
             @if (showAnswerPage) {
                 <app-quiz-answer-page
-                    (answer)="onAnswer($event)"
+                    (answer)="onAnswer()"
                     (replayVideo)="replayVideo()"
                 />
             } @else {
@@ -36,8 +36,8 @@ export class TikTokVideoComponent {
         console.log('Video ended');
     }
 
-    onAnswer(isTrue: boolean) {
-        this.answerSubmitted.emit(isTrue);
+    onAnswer() {
+        this.answerSubmitted.emit();
         this.showAnswerPage = false;
     }
 

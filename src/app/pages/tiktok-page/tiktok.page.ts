@@ -9,7 +9,7 @@ import { TikTokVideoComponent } from '../../components/tiktok-video/tiktok-video
       <div class="h-screen w-full">
           <app-tiktok-video 
               [videoUrl]="currentVideo" 
-              (answerSubmitted)="onAnswerSubmitted($event)"
+              (answerSubmitted)="onAnswerSubmitted()"
           />
       </div>
   `,
@@ -29,8 +29,7 @@ export class TiktokPageComponent implements OnInit {
         });
     }
 
-    onAnswerSubmitted(isTrue: boolean) {
-        console.log('Answer submitted:', isTrue);
+    onAnswerSubmitted() {
         this.nextVideo();
     }
 
