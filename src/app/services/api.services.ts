@@ -14,16 +14,16 @@ export class ApiService {
   // GET request
   getAllVideos(): Observable<string[]> {
     const videos = [
-      'assets/videos/1_A.mp4',
-      'assets/videos/1_B.mp4',
-      'assets/videos/2_A.mp4',
-      'assets/videos/2_B.mp4',
-      'assets/videos/3_A.mp4',
-      'assets/videos/3_B.mov',
-      'assets/videos/4_A.mp4',
-      'assets/videos/4_B.mp4',
-      'assets/videos/5_A.mp4',
-      'assets/videos/5_B.mp4',
+      // 'videos/1_A.mp4', Does not work well with shorts format
+      'videos/1_B.mp4',
+      'videos/2_A.mp4',
+      'videos/2_B.mp4',
+      'videos/3_A.mp4',
+      // 'videos/3_B.mov', does not play
+      'videos/4_A.mp4',
+      'videos/4_B.mp4',
+      'videos/5_A.mp4',
+      'videos/5_B.mp4',
     ];
 
     // return this.http.get<Array<string>>(`${this.baseUrl}/videos/all`);
