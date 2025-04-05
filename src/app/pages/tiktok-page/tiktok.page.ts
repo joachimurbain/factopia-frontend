@@ -1,6 +1,7 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.services';
+import { Component, computed, effect, inject, OnInit } from '@angular/core';
+import { QuestionService } from '../../services/question.services';
 import { TikTokVideoComponent } from '../../components/tiktok-video/tiktok-video.components';
+import { GameTypes } from '../../interfaces/GameTypes.enum';
 @Component({
   selector: 'app-tiktok-page',
   standalone: true,
@@ -15,28 +16,41 @@ import { TikTokVideoComponent } from '../../components/tiktok-video/tiktok-video
   `,
 })
 export class TiktokPageComponent implements OnInit {
-    public videos: string[] = [];
-    public currentVideoIndex = 0;
-    public apiService = inject(ApiService);
+  public videos: string[] = [];
+  public currentVideoIndex = 0;
+  public questionService = inject(QuestionService);
 
-    get currentVideo(): string {
-        return this.videos[this.currentVideoIndex];
-    }
+  get currentVideo(): string {
+    return this.videos[this.currentVideoIndex];
+  }
 
-    ngOnInit(): void {
-        this.apiService.getAllVideos().subscribe((videos) => {
-            this.videos = videos;
-        });
-    }
+  ngOnInit(): void {
+    // this.questionService.getAllVideos().subscribe((videos) => {
+    //   this.videos = videos;
+    // });
+  }
 
-    onAnswerSubmitted() {
-        this.nextVideo();
-    }
+    // onAnswerSubmitted() {
+    //     this.nextVideo();
+    // }
+  public questions = computed(() => this.questionService.items());
 
-    private nextVideo() {
-        if (this.currentVideoIndex < this.videos.length - 1) {
-            this.currentVideoIndex++;
-        }
-        console.log('Next video:', this.currentVideo);
+  constructor() {
+    this.questionService.loadByGameType(GameTypes.TikTok);
+    effect(() => {
+      console.log(this.questions());
+    });
+  }
+
+  onAnswerSubmitted(isTrue: boolean) {
+    console.log('Answer submitted:', isTrue);
+    this.nextVideo();
+  }
+
+  private nextVideo() {
+    if (this.currentVideoIndex < this.videos.length - 1) {
+      this.currentVideoIndex++;
     }
+    console.log('Next video:', this.currentVideo);
+  }
 }
