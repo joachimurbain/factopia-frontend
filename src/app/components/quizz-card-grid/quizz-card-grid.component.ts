@@ -24,8 +24,8 @@ export class QuizzCardGridComponent {
 
     quizz: Array<QuizzCard> = [
         {
-            name: "Shorts",
-            url: "/shorts",
+            name: "Tiktok",
+            url: "/tiktok",
             gradient: {
                 startColor: "#FF0099",  // Pink
                 endColor: "#FF4D00",    // Orange

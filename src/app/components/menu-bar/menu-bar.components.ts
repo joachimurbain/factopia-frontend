@@ -46,11 +46,11 @@ import { ButtonModule } from 'primeng/button';
                     </a>
                     
                     <a 
-                        routerLink="/shorts" 
+                        routerLink="/tiktok" 
                         class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 transition-colors"
                         (click)="isOpen.set(false)"
                     >
-                        <i class="pi pi-play mr-2"></i>Shorts
+                        <i class="pi pi-play mr-2"></i>Tiktok
                     </a>
                     
                     <a 
