@@ -11,7 +11,6 @@ import { LogoComponent } from './ui/logo.component';
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink,
     ButtonModule,
     UserInfoComponent,
     SideBarMenuComponent,
