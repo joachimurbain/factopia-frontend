@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import {TrueFalseQuestion} from '../interfaces/TrueFalseQuestion';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ export class ApiService {
   private baseUrl = 'https://api.example.com';
 
   http = inject(HttpClient);
+  private readonly QUESTION_URL = 'json-data/true_false_questions.json';
 
   // GET request
   getAllVideos(): Observable<string[]> {
@@ -28,5 +30,9 @@ export class ApiService {
 
     // return this.http.get<Array<string>>(`${this.baseUrl}/videos/all`);
     return of(videos);
+  }
+
+  getQuestions(): Observable<TrueFalseQuestion[]> {
+    return this.http.get<TrueFalseQuestion[]>(this.QUESTION_URL);
   }
 }

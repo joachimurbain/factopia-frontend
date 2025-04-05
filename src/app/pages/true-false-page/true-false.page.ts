@@ -1,8 +1,13 @@
 import { Component } from "@angular/core";
+import {MenuBarComponent} from '../../components/menu-bar/menu-bar.components';
+import {TrueFalseComponent} from '../../components/true-false/true-false.component';
 
 @Component({
-    selector: 'app-true-false-page',
-    template: `<div>True False</div>`,
-    styles: []
+  selector: 'app-true-false-page',
+  templateUrl: './true-false-page.html',
+  imports: [
+    TrueFalseComponent
+  ],
+  styles: []
 })
 export class TrueFalsePageComponent {}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "Le soleil tourne autour de la Terre.",
+    "imageUrl": "",
+    "correctAnswer": false,
+    "explanation": "C'est la Terre qui tourne autour du Soleil, selon le modèle héliocentrique."
+  },
+  {
+    "id": 2,
+    "question": "Les abeilles peuvent reconnaître les visages humains.",
+    "imageUrl": "",
+    "correctAnswer": true,
+    "explanation": "Des études ont montré que les abeilles peuvent reconnaître les visages à partir de motifs visuels."
+  },
+  {
+    "id": 3,
+    "question": "Les humains n’utilisent que 10% de leur cerveau.",
+    "imageUrl": "",
+    "correctAnswer": false,
+    "explanation": "C'est un mythe. Les neuroscientifiques ont prouvé que nous utilisons pratiquement toutes les parties de notre cerveau."
+  },
+  {
+    "id": 4,
+    "question": "L'eau bout à 100°C partout.",
+    "imageUrl": "",
+    "correctAnswer": true,
+    "explanation": "L'eau bout à une température différente selon l'altitude."
+  },
+  {
+    "id": 5,
+    "question": "Les chameaux stockent l'eau dans leurs bosses.",
+    "imageUrl": "",
+    "correctAnswer": false,
+    "explanation": "Leurs bosses stockent de la graisse, pas de l'eau."
+  }
+]
