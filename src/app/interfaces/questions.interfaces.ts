@@ -15,7 +15,7 @@ interface TrueFalseQuestion {
     category: string[];
   }
   
-  interface Card {
+  interface DidYouKnowCard {
     title: string;
     question: string;
     solution: boolean;
