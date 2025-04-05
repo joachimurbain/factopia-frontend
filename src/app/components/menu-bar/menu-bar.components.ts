@@ -33,8 +33,8 @@ export class MenuBarComponent {
             icon: 'pi pi-list',
             items: [
                 {
-                    label: 'Tiktok-like',
-                    routerLink: ['#']
+                    label: 'Shorts',
+                    routerLink: ['/shorts']
                 },
                 {
                     label: 'Choix multiple',

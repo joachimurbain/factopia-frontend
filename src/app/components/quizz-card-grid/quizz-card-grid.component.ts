@@ -15,8 +15,8 @@ import { QuizzCardComponent } from "../quizz-card/quizz-card.component";
 export class QuizzCardGridComponent {
     quizz : Array<QuizzCard> = [
         {
-            name: "TikTok-like",
-            url: "#"
+            name: "Shorts",
+            url: "/shorts"
         },
         {
             name: "Choix multiple",
