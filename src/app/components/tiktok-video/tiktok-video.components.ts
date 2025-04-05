@@ -38,6 +38,7 @@ export class TikTokVideoComponent {
 
     onAnswer(isTrue: boolean) {
         this.answerSubmitted.emit(isTrue);
+        this.showAnswerPage = false;
     }
 
     replayVideo() {
