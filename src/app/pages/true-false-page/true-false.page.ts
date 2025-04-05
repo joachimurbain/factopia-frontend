@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import {MenuBarComponent} from '../../components/menu-bar/menu-bar.components';
 import {TrueFalseComponent} from '../../components/true-false/true-false.component';
 
 @Component({
