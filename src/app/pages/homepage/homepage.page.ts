@@ -10,7 +10,7 @@ import { MenuBarComponent } from '../../components/menu-bar/menu-bar.components'
     <div>
       <app-menu-bar />
       <div class="px-4 flex-grow">
-        <app-quizz-card-grid />
+        <app-quizz-card-grid containerClass="mt-6" />
       </div>
     </div>
   `,
