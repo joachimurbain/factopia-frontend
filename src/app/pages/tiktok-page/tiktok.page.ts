@@ -12,7 +12,6 @@ import { ResourceType } from '../../services/resource.model';
       <div class="h-screen w-full">
           <app-tiktok-video
               [question]="questions()[currentVideoIndex]"
-              [videoUrl]="currentVideo" 
               (answerSubmitted)="onAnswerSubmitted()"
           />
       </div>
