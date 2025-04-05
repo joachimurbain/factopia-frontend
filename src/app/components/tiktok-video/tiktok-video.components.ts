@@ -1,5 +1,6 @@
 import { Component, input, Output, EventEmitter, ViewChild, ElementRef } from "@angular/core";
 import { QuizAnswerPageComponent } from "../quiz-answer-page/quiz-answer-page.component";
+import { Question } from "../../services/question.model";
 
 @Component({
     selector: 'app-tiktok-video',
@@ -10,15 +11,14 @@ import { QuizAnswerPageComponent } from "../quiz-answer-page/quiz-answer-page.co
 
             @if (showAnswerPage) {
             <span>Answer page</span>
-            <!--
-                <app-quiz-answer-page
-                    (answer)="onAnswer()"
-                    (replayVideo)="replayVideo()"
+            <app-quiz-answer-page
+                [question]="question()"
+                (answer)="onAnswer()"
+                (replayVideo)="replayVideo()"
                 />
-            -->
             } @else {
             <video
-                [src]="videoUrl()" 
+                [src]="question().resource.path" 
                 class="absolute inset-0 w-full h-full max-h-screen object-cover"
                 (ended)="onVideoEnded()"
                 controls
@@ -29,8 +29,12 @@ import { QuizAnswerPageComponent } from "../quiz-answer-page/quiz-answer-page.co
     `
 })
 export class TikTokVideoComponent {
-    public videoUrl = input.required<string>();
+    public question = input.required<Question>();
     @Output() answerSubmitted = new EventEmitter<boolean>();
+
+    constructor() {
+        // console.log(this.question());
+    }
     
     showAnswerPage = false;
 

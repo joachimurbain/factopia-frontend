@@ -1,5 +1,5 @@
 import { Component, EventEmitter, input, Output } from '@angular/core';
-
+import { Question } from '../../services/question.model';
 @Component({
     selector: 'app-quiz-answer-page',
     standalone: true,
@@ -61,7 +61,7 @@ import { Component, EventEmitter, input, Output } from '@angular/core';
 export class QuizAnswerPageComponent {
     @Output() answer = new EventEmitter<void>();
     @Output() replayVideo = new EventEmitter<void>();
-    tiktokQuizz = input.required<any>();
+    question = input.required<Question>();
 
     hasAnswered = false;
     showExplanation = false;
