@@ -2,8 +2,9 @@ interface TikTokRealOrFakeQuestion {
     name: string;
     title: string;
     video: string;  // Required video URL (TikTok video)
+    video_caption: string;
     solution: boolean;
-    category: string[];
+    explanation: string;
   }
 
   export default TikTokRealOrFakeQuestion; 
