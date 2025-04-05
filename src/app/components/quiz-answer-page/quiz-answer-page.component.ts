@@ -33,7 +33,7 @@ import { Component, EventEmitter, input, Output } from '@angular/core';
                 }
 
                 @if (hasAnswered) {
-                    @if (isAnswerCorrect()) {r
+                    @if (isAnswerCorrect()) {
                         <span class="text-2xl font-bold mb-6 text-green-500">Réponse correcte !</span>
                     } @else {
                         <span class="text-2xl font-bold mb-6 text-red-500">Réponse incorrecte !</span>

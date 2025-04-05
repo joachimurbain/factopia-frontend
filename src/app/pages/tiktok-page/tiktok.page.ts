@@ -42,8 +42,7 @@ export class TiktokPageComponent implements OnInit {
     });
   }
 
-  onAnswerSubmitted(isTrue: boolean) {
-    console.log('Answer submitted:', isTrue);
+  onAnswerSubmitted() {
     this.nextVideo();
   }
 

@@ -9,10 +9,13 @@ import { QuizAnswerPageComponent } from "../quiz-answer-page/quiz-answer-page.co
         <div class="relative w-full h-screen">
 
             @if (showAnswerPage) {
+            <span>Answer page</span>
+            <!--
                 <app-quiz-answer-page
                     (answer)="onAnswer()"
                     (replayVideo)="replayVideo()"
                 />
+            -->
             } @else {
             <video
                 [src]="videoUrl()" 
