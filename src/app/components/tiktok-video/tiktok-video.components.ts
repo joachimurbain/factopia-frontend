@@ -7,7 +7,7 @@ import { Component, input } from "@angular/core";
         <div class="relative w-full h-screen">
             <video 
                 [src]="videoUrl()" 
-                class="absolute inset-0 w-full h-full object-cover"
+                class="absolute inset-0 w-full h-full max-h-screen object-cover"
                 controls
                 autoplay
                 loop
