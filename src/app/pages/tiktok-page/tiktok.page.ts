@@ -6,8 +6,12 @@ import { TikTokVideoComponent } from '../../components/tiktok-video/tiktok-video
   standalone: true,
   imports: [TikTokVideoComponent],
   template: `
-      <div>
-          <app-tiktok-video [videoUrl]="videos[0]" />
+      <div class="snap-y snap-mandatory h-screen overflow-y-scroll">
+            @for (video of videos; track $index) {
+                <div class="snap-start h-screen w-full">
+                    <app-tiktok-video [videoUrl]="video" />
+                </div>
+            }
       </div>
   `,
 })
