@@ -28,7 +28,7 @@
           class="w-full py-3 rounded-lg font-semibold shadow transition duration-300"
           [ngClass]="{
             'bg-green-500 text-white': selectedAnswer === true && currentQuestion.correctAnswer,
-            'bg-red-500 text-white': selectedAnswer === true && currentQuestion.correctAnswer === false,
+            'bg-red-500 text-white': selectedAnswer === true && !currentQuestion.correctAnswer,
             'bg-blue-500 text-white hover:bg-blue-600': selectedAnswer === null
           }"
         >
@@ -40,8 +40,8 @@
           [disabled]="selectedAnswer !== null"
           class="w-full py-3 rounded-lg font-semibold shadow transition duration-300"
           [ngClass]="{
-            'bg-green-500 text-white': selectedAnswer === false && currentQuestion.correctAnswer === false,
-            'bg-red-500 text-white': selectedAnswer === false && currentQuestion.correctAnswer === true,
+            'bg-green-500 text-white': selectedAnswer === false && !currentQuestion.correctAnswer,
+            'bg-red-500 text-white': selectedAnswer === false && currentQuestion.correctAnswer,
             'bg-blue-500 text-white hover:bg-blue-600': selectedAnswer === null
           }"
         >
