@@ -7,13 +7,9 @@ import {TrueFalseQuestion} from '../interfaces/TrueFalseQuestion';
   providedIn: 'root'
 })
 export class ApiService {
-
-  private baseUrl = 'https://api.example.com';
-
-  http = inject(HttpClient);
+  private readonly _http = inject(HttpClient);
   private readonly QUESTION_URL = 'json-data/true_false_questions.json';
 
-  // GET request
   getAllVideos(): Observable<string[]> {
     const videos = [
       // 'videos/1_A.mp4', Does not work well with shorts format
@@ -28,11 +24,10 @@ export class ApiService {
       'videos/5_B.mp4',
     ];
 
-    // return this.http.get<Array<string>>(`${this.baseUrl}/videos/all`);
     return of(videos);
   }
 
   getQuestions(): Observable<TrueFalseQuestion[]> {
-    return this.http.get<TrueFalseQuestion[]>(this.QUESTION_URL);
+    return this._http.get<TrueFalseQuestion[]>(this.QUESTION_URL);
   }
 }
