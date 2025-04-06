@@ -1,11 +1,15 @@
-import { Component, input } from "@angular/core";
-import { QuizzCardComponent } from "../quizz-card/quizz-card.component";
+import { Component, input } from '@angular/core';
+import { QuizzCardComponent } from '../quizz-card/quizz-card.component';
 
 @Component({
-    selector: 'app-quizz-card-grid',
-    imports: [QuizzCardComponent],
-    template: `
-    <div [class]="containerClass()" class="grid grid-cols-2 gap-4">
+  selector: 'app-quizz-card-grid',
+  imports: [QuizzCardComponent],
+  template: `
+    <div class="w-full">
+      <div
+        [class]="containerClass()"
+        class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-screen-lg mx-auto"
+      >
         @for (quizzItem of quizz; track $index) {
             <app-quizz-card
                 [name]="quizzItem.name"
@@ -16,12 +20,13 @@ import { QuizzCardComponent } from "../quizz-card/quizz-card.component";
                 [gradientAngle]="quizzItem.gradient.angle"
             />
         }
+      </div>
     </div>
-    `,
-    standalone: true
+  `,
+  standalone: true,
 })
 export class QuizzCardGridComponent {
-    containerClass = input<string>('');
+  containerClass = input<string>('');
 
     quizz: Array<QuizzCard> = [
         {
