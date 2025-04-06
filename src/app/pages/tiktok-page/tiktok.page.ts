@@ -23,7 +23,7 @@ import { MenuBarComponent } from '../../components/menu-bar/menu-bar.components'
     <div class="h-screen w-full max-h-screen flex flex-col">
       <app-menu-bar />
       <div class="p-4 flex-1">
-        <div class="h-full w-full rounded-xl">
+        <div class="h-full w-full rounded-xl overflow-hidden">
           <app-tiktok-video
             [question]="questions()[currentVideoIndex]"
             (answerSubmitted)="onAnswerSubmitted()" />

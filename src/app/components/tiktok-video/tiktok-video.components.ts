@@ -15,9 +15,8 @@ import { environment } from '../../../environments/environment';
   standalone: true,
   imports: [QuizAnswerPageComponent],
   template: `
-    <div class="relative w-full h-screen">
-      @if (showAnswerPage) {
-      <span>Answer page</span>
+    <div class="w-full h-full">
+      @if(showAnswerPage) {
       <app-quiz-answer-page
         [question]="question()"
         (answer)="onAnswer()"

@@ -1,12 +1,17 @@
-import { Component, EventEmitter, input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Output, signal } from '@angular/core';
 import { Question } from '../../services/question.model';
 import { GameTypes } from '../../interfaces/GameTypes.enum';
+import { ShareModalComponent } from '../share-modal/share-modal.component';
+
 @Component({
   selector: 'app-quiz-answer-page',
   standalone: true,
+  imports: [
+    ShareModalComponent
+  ],
   template: `
     <div
-      class="h-screen w-full flex flex-col items-center justify-center bg-black/80 text-white px-4"
+      class="h-full w-full flex flex-col items-center justify-center px-4"
     >
       <div class="space-y-8 text-center">
         @if (!hasAnswered) {
@@ -16,13 +21,13 @@ import { GameTypes } from '../../interfaces/GameTypes.enum';
         <div class="flex gap-4 justify-center">
           <button
             (click)="onAnswer(true)"
-            class="px-8 py-4 bg-green-600 hover:bg-green-700 rounded-lg text-xl font-semibold transition"
+            class="px-8 py-4 bg-green-600 hover:bg-green-700 rounded-lg text-xl font-semibold transition text-white"
           >
             Vrai
           </button>
           <button
             (click)="onAnswer(false)"
-            class="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-lg text-xl font-semibold transition"
+            class="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-lg text-xl font-semibold transition text-white"
           >
             Faux
           </button>
@@ -30,7 +35,7 @@ import { GameTypes } from '../../interfaces/GameTypes.enum';
 
         <button
           (click)="onReplayVideo()"
-          class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center gap-2 mx-auto transition"
+          class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center gap-2 mx-auto transition text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +66,7 @@ import { GameTypes } from '../../interfaces/GameTypes.enum';
         }
         <button
           (click)="nextVideo()"
-          class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center gap-2 mx-auto transition"
+          class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center gap-2 mx-auto transition text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +83,21 @@ import { GameTypes } from '../../interfaces/GameTypes.enum';
           Vidéo suivante
         </button>
         }
+        
+        
+        <button
+          (click)="isShareModalOpen.set(true)"
+          class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center gap-2 mx-auto transition text-white"
+        >
+          Partager
+        </button>
       </div>
     </div>
+
+    <app-share-modal 
+      [isOpen]="isShareModalOpen()" 
+      (close)="isShareModalOpen.set(false)"
+    />
   `,
 })
 export class QuizAnswerPageComponent {
@@ -90,6 +108,8 @@ export class QuizAnswerPageComponent {
   hasAnswered = false;
 
   quizzAnswer = false;
+
+  isShareModalOpen = signal(false);
 
   onAnswer(choice: boolean) {
     this.quizzAnswer = choice;
