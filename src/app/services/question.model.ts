@@ -6,6 +6,6 @@ import { Answer } from './answer.model';
 export interface Question extends BaseEntity {
   content: string;
   gameType: GameType;
-  resource: Resource;
-  answer: Answer;
+  resources: Resource[];
+  answers: Answer[];
 }
