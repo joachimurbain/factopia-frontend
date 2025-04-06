@@ -24,6 +24,7 @@ import { SidebarModule } from 'primeng/sidebar';
 })
 export class SideBarMenuComponent {
   close = output<void>();
+  logout = output<void>();
   isOpen = input.required<boolean>();
   _isOpen: boolean = false;
 
@@ -47,5 +48,12 @@ export class SideBarMenuComponent {
       routerLink: ['/fill-blanks'],
     },
     { label: 'À propos', icon: 'pi pi-info-circle', routerLink: ['/about'] },
+    {
+      label: 'Déconnexion',
+      icon: 'pi pi-sign-out',
+      command: () => {
+        this.logout.emit();
+      },
+    },
   ];
 }
