@@ -43,11 +43,15 @@ export class SideBarMenuComponent {
       routerLink: ['/multiple-choice'],
     },
     {
+      label: 'Vrai ou faux',
+      icon: 'pi pi-check-square',
+      routerLink: ['/true-false'],
+    },
+    {
       label: 'Mots à trous',
       icon: 'pi pi-pencil',
       routerLink: ['/fill-blanks'],
     },
-    { label: 'À propos', icon: 'pi pi-info-circle', routerLink: ['/about'] },
     {
       label: 'Déconnexion',
       icon: 'pi pi-sign-out',

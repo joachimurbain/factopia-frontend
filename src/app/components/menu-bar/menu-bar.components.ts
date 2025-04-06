@@ -68,13 +68,6 @@ export class MenuBarComponent {
 
   userMenuItems: MenuItem[] = [
     {
-      label: 'Paramètres',
-      icon: 'pi pi-cog',
-      command: () => {
-        // navigate to settings, etc.
-      },
-    },
-    {
       label: 'Déconnexion',
       icon: 'pi pi-sign-out',
       command: () => {

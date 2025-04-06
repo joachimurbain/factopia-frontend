@@ -6,13 +6,9 @@ import { ShareModalComponent } from '../share-modal/share-modal.component';
 @Component({
   selector: 'app-quiz-answer-page',
   standalone: true,
-  imports: [
-    ShareModalComponent
-  ],
+  imports: [ShareModalComponent],
   template: `
-    <div
-      class="h-full w-full flex flex-col items-center justify-center px-4"
-    >
+    <div class="h-full w-full flex flex-col items-center justify-center px-4">
       <div class="space-y-8 text-center">
         @if (!hasAnswered) {
         <h2 class="text-2xl font-bold mb-6">
@@ -83,8 +79,7 @@ import { ShareModalComponent } from '../share-modal/share-modal.component';
           Vidéo suivante
         </button>
         }
-        
-        
+
         <button
           (click)="isShareModalOpen.set(true)"
           class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center gap-2 mx-auto transition text-white"
@@ -94,8 +89,8 @@ import { ShareModalComponent } from '../share-modal/share-modal.component';
       </div>
     </div>
 
-    <app-share-modal 
-      [isOpen]="isShareModalOpen()" 
+    <app-share-modal
+      [isOpen]="isShareModalOpen()"
       (close)="isShareModalOpen.set(false)"
     />
   `,
