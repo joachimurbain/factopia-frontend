@@ -12,7 +12,7 @@ import { environment } from '../../environments/environment';
 })
 export class QuestionService extends EntityStateService<Question> {
   constructor(httpClient: HttpClient) {
-    super(httpClient, 'Question');
+    super(httpClient, '/Question');
 
     effect(() => {
       const gameType = this._loadByGameType();
@@ -46,7 +46,7 @@ export class QuestionService extends EntityStateService<Question> {
   private readonly _loadByGameType = signal<GameTypes | null>(null);
 
   getAllByGameType(gameType: GameTypes) {
-    const url = `${environment.apiUrl}question/gametype/${gameType}`;
+    const url = `${environment.apiUrl}/question/gametype/${gameType}`;
     return this.httpClient.get<Question[]>(url);
   }
 
