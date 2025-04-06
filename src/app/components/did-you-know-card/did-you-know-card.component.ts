@@ -7,7 +7,7 @@ import { Component, input } from '@angular/core';
     <div 
       [class]="getClasses()"
     >
-      <div class="text-center text-blue-500 text-2xl ">
+      <div class="text-center text-[#059669] text-2xl ">
         {{ text() }}
       </div>
     </div>

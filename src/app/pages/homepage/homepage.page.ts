@@ -25,8 +25,8 @@ import { FactService } from '../../services/fact.service';
           [endColor]="'#FF4D00'" 
           [gradientAngle]="45"
         />
-        <button class="bg-blue-500 text-white w-full px-4 py-2 rounded-full" (click)="nextFact()">Une autre astuce ?</button>
-        <button class="bg-blue-500 text-white w-full px-4 py-2 rounded-full" (click)="isShareModalOpen.set(true)">Partager</button>
+        <button class="bg-[#059669] text-white w-full px-4 py-2 rounded-full" (click)="nextFact()">Une autre astuce ?</button>
+        <button class="bg-[#059669] text-white w-full px-4 py-2 rounded-full" (click)="isShareModalOpen.set(true)">Partager</button>
       </div>
     </div>
 
