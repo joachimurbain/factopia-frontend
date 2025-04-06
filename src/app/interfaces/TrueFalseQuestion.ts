@@ -1,10 +1,8 @@
-interface TrueFalseQuestion {
-    name: string;
-    title: string;
+export interface TrueFalseQuestion {
+    id: number;
     question: string;
-    solution: boolean;
-    category: string[];
-    image?: string;  // Optional image
-  }
-
-export default TrueFalseQuestion; 
+    imageUrl?: string;
+    correctAnswer: boolean;
+    explanationCorrect: string;
+    explanationWrong: string;
+}

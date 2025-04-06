@@ -7,8 +7,8 @@ import { QuizzCardComponent } from "../quizz-card/quizz-card.component";
     template: `
     <div [class]="containerClass()" class="grid grid-cols-2 gap-4">
         @for (quizzItem of quizz; track $index) {
-            <app-quizz-card 
-                [name]="quizzItem.name" 
+            <app-quizz-card
+                [name]="quizzItem.name"
                 [url]="quizzItem.url"
                 [icon]="quizzItem.icon"
                 [startColor]="quizzItem.gradient.startColor"
@@ -46,7 +46,7 @@ export class QuizzCardGridComponent {
         },
         {
             name: "Vrai ou faux",
-            url: "#",
+            url: "/true-false",
             icon: "pi pi-check-square",  // Added a suitable icon for true/false
             gradient: {
                 startColor: "#059669",  // Emerald
