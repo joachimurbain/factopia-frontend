@@ -58,7 +58,7 @@ import { ShareModalComponent } from '../share-modal/share-modal.component';
         <span class="text-2xl font-bold mb-6 text-red-500">
           Réponse incorrecte !
         </span>
-        <p class="text-lg">{{ question().answers[0].content }}</p>
+        <p class="text-lg">{{ question().answers[1].content }}</p>
         }
         <button
           (click)="nextVideo()"

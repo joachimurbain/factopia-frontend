@@ -1,4 +1,4 @@
-import { Component, computed, effect, inject, OnInit } from '@angular/core';
+import { Component, computed, effect, inject } from '@angular/core';
 import { QuestionService } from '../../services/question.services';
 import { TikTokVideoComponent } from '../../components/tiktok-video/tiktok-video.components';
 import { GameTypes } from '../../interfaces/GameTypes.enum';
