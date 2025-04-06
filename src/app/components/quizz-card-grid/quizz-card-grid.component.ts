@@ -5,20 +5,20 @@ import { QuizzCardComponent } from '../quizz-card/quizz-card.component';
   selector: 'app-quizz-card-grid',
   imports: [QuizzCardComponent],
   template: `
-    <div class="w-full px-4">
+    <div class="w-full">
       <div
         [class]="containerClass()"
         class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-screen-lg mx-auto"
       >
         @for (quizzItem of quizz; track $index) {
-        <app-quizz-card
-          [name]="quizzItem.name"
-          [url]="quizzItem.url"
-          [icon]="quizzItem.icon"
-          [startColor]="quizzItem.gradient.startColor"
-          [endColor]="quizzItem.gradient.endColor"
-          [gradientAngle]="quizzItem.gradient.angle"
-        />
+            <app-quizz-card
+                [name]="quizzItem.name"
+                [url]="quizzItem.url"
+                [icon]="quizzItem.icon"
+                [startColor]="quizzItem.gradient.startColor"
+                [endColor]="quizzItem.gradient.endColor"
+                [gradientAngle]="quizzItem.gradient.angle"
+            />
         }
       </div>
     </div>
@@ -73,12 +73,12 @@ export class QuizzCardGridComponent {
 }
 
 interface QuizzCard {
-  name: string;
-  url: string;
-  icon: string;
-  gradient: {
-    startColor: string;
-    endColor: string;
-    angle: number;
-  };
+    name: string;
+    url: string;
+    icon: string;
+    gradient: {
+        startColor: string;
+        endColor: string;
+        angle: number;
+    }
 }
