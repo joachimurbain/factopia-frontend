@@ -3,10 +3,12 @@ import { QuestionService } from '../../services/question.services';
 import { TikTokVideoComponent } from '../../components/tiktok-video/tiktok-video.components';
 import { GameTypes } from '../../interfaces/GameTypes.enum';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { MenuBarComponent } from '../../components/menu-bar/menu-bar.components';
+
 @Component({
   selector: 'app-tiktok-page',
   standalone: true,
-  imports: [TikTokVideoComponent, ProgressSpinnerModule],
+  imports: [TikTokVideoComponent, ProgressSpinnerModule, MenuBarComponent],
   template: `
     <div class="h-screen w-full">
       @if(questionService.isLoading() || questionService.error()){
@@ -17,10 +19,17 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
         />
       </div>
       } @else{
-      <app-tiktok-video
-        [question]="questions()[currentVideoIndex]"
-        (answerSubmitted)="onAnswerSubmitted()"
-      />
+       
+    <div class="h-screen w-full max-h-screen flex flex-col">
+      <app-menu-bar />
+      <div class="p-4 flex-1">
+        <div class="h-full w-full rounded-xl">
+          <app-tiktok-video
+            [question]="questions()[currentVideoIndex]"
+            (answerSubmitted)="onAnswerSubmitted()" />
+        </div>
+      </div>
+    </div>
       }
     </div>
   `,
