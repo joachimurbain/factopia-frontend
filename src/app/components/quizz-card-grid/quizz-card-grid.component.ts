@@ -51,7 +51,7 @@ export class QuizzCardGridComponent {
     },
     {
       name: 'Vrai ou faux',
-      url: '#',
+      url: '/true-false',
       icon: 'pi pi-check-square', // Added a suitable icon for true/false
       gradient: {
         startColor: '#059669', // Emerald
