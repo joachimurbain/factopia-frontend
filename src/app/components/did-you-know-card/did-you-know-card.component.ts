@@ -20,6 +20,6 @@ export class DidYouKnowCardComponent {
   gradientAngle = input<number>(45);
 
   getClasses(): string {
-    return `w-full h-[250px] p-6 rounded-lg shadow-md flex flex-col justify-center items-center font-[Delius]`;
+    return `w-full h-[230px] p-6 rounded-lg shadow-md flex flex-col justify-center items-center font-[Delius]`;
   }
 }
