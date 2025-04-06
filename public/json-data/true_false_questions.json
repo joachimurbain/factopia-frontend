@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/1_image_fake.png",
+    "correctAnswer": false,
+    "explanationCorrect": "C’était bien une image IA (Midjourney).\nTu as repéré les écussons incohérents, les dents en trop, et les fenêtres bancales.\nContinue, tu deviens un vrai détective visuel !",
+    "explanationWrong": "C’était une image IA (Midjourney).\nIndices : écussons différents, trop de dents, fenêtres bizarres.\nTu t’améliores à chaque essai !"
+  },
+  {
+    "id": 2,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/2_image_fake.png",
+    "correctAnswer": false,
+    "explanationCorrect": "Œil de lynx activé !\nC’était une image IA (Midjourney).\nFaçades étranges, perspectives bancales, fenêtres floues… tu l’as vue venir.\n+1 perspicacité. Prochaine cible en approche !",
+    "explanationWrong": "C’était une image IA (Midjourney).\nFaçades bancales, perspectives douteuses, fenêtres trop parfaites… des indices bien planqués.\nTu gagnes en XP. La prochaine, tu la découpes net !"
+  },
+  {
+    "id": 3,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/3_image_fake.png",
+    "correctAnswer": false,
+    "explanationCorrect": "Bravo, bien vu !\nImage générée par Midjourney.\nIndice clé : un spaghetti qui disparaît puis réapparaît sans logique.",
+    "explanationWrong": "Bien tenté !\nC’était une image IA (Midjourney).\nDétail piégeux : un spaghetti qui s’interrompt… puis revient sans raison."
+  },
+  {
+    "id": 4,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/4_image_fake.png",
+    "correctAnswer": false,
+    "explanationCorrect": "Bien joué !\nImage IA (Midjourney) repérée.\nMain déformée, pied trop fin, poil trop parfait… ça sentait le faux.\nTu montes en maîtrise. Prêt·e pour la suite ?",
+    "explanationWrong": "Bien tenté, mais c’était du faux !\nImage générée par Midjourney.\nMain bizarre, pied trop fin, poil trop lisse… l’IA a encore frappé.\nTu gagnes en XP. On continue ?"
+  },
+  {
+    "id": 5,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/5_image_fake.png",
+    "correctAnswer": false,
+    "explanationCorrect": "Bien vu !\nImage IA (Midjourney), bluffante mais fausse.\nUn bouton manquant en haut de la chemise te mettait sur la piste.\nTu lis les IA comme un livre ouvert. On continue ?",
+    "explanationWrong": "Trompé·e par le style !\nC’était une image IA (Midjourney), très proche d’une vraie.\nPetit indice : un bouton manquant en haut de la chemise.\nL’IA progresse… mais toi aussi. En route pour la prochaine !"
+  },
+  {
+    "id": 6,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/6_image_real.png",
+    "correctAnswer": true,
+    "explanationCorrect": "Bien joué !\nC’était une vraie image (Getty Images).\nTu ne t’es pas laissé piéger par la lumière parfaite ni le cadrage clean.\n+1 point vérité. En route pour la prochaine mission !",
+    "explanationWrong": "Pas grave, presque !\nC’était une vraie photo (Getty Images).\nPiège classique : lumière trop parfaite, cadrage clean.\nTu gagnes en XP, la prochaine est pour toi !"
+  },
+  {
+    "id": 7,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/7_image_real.png",
+    "correctAnswer": true,
+    "explanationCorrect": "Œil de lynx confirmé !\nC’était une vraie image (Getty Images).\nLumière clean, cadrage pro… mais tu n’as pas été dupé.\n+1 clairvoyance. En route vers le badge Œil Absolu !",
+    "explanationWrong": "Faux positif !\nC’était une vraie image (Getty Images).\nLumière parfaite, cadrage clean… elle a semé le doute.\nTu gagnes en vigilance. Œil Absolu reste à portée. On enchaîne ?"
+  },
+  {
+    "id": 8,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/8_image_real.jpg",
+    "correctAnswer": true,
+    "explanationCorrect": "Bien joué !\nC’était une vraie photo (Getty Images).\nLes spaghettis sont cohérents, rien ne disparaît sans raison. Tu as l’œil !",
+    "explanationWrong": "Ah, piégé·e cette fois !\nC’était une vraie photo (Getty Images).\nLes spaghettis étaient bien réels, sans glitch ni incohérence. On continue ?"
+  },
+  {
+    "id": 9,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/9_image_real.png",
+    "correctAnswer": true,
+    "explanationCorrect": "Bravo, bien vu !\nC’était une vraie image (Getty Images).\nRien d’anormal : proportions, textures, arrière-plan… tout colle.\nEnchaînons !",
+    "explanationWrong": "Pas cette fois !\nC’était une vraie image (Getty Images).\nTout était cohérent : main, pied, poil du chien… aucun bug IA.\nTu affines ton flair. La prochaine est pour toi !"
+  },
+  {
+    "id": 10,
+    "question": "Cette image est-elle réelle ? Vrai ou Faux",
+    "imageUrl": "images/10_image_real.png",
+    "correctAnswer": true,
+    "explanationCorrect": "Bien joué !\nC’était une vraie photo (Getty Images).\nStyle très “photo d’illustration”, mais tout est cohérent, bouton compris.\nTu ne te laisses pas avoir. On continue ?",
+    "explanationWrong": "Pas cette fois !\nC’était une vraie photo (Getty Images).\nLe style pouvait tromper, mais aucun détail n’était hors-jeu.\nTu affines ton radar. Prêt·e pour la suite ?"
+  }
+]
